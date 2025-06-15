@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "squeezed",
+	"version": "${version}",
+	"name": "Squeezed",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/squeezed/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "straight.squeezin.it.Squeezed",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "straight.squeezin.it.SqueezedClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"squeezed.mixins.json",
+		{
+			"config": "squeezed.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
