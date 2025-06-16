@@ -25,14 +25,20 @@ public class ModItems {
 
     public static void initialize() {
         // Register the group.
-        Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, SQUEEZED_ITEMGROUP_MAIN_KEY, SQUEEZED_ITEMGROUP_MAIN);
+        Registry.register(Registries.ITEM_GROUP, SQUEEZED_ITEMGROUP_MCD_KEY, SQUEEZED_ITEMGROUP_MCD);
 
         // Register items to the custom item group.
-        ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {});
+        ItemGroupEvents.modifyEntriesEvent(SQUEEZED_ITEMGROUP_MCD_KEY).register(itemGroup -> {});
     }
 
-    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Squeezed.MOD_ID, "item_group"));
-    public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+    public static final RegistryKey<ItemGroup> SQUEEZED_ITEMGROUP_MAIN_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Squeezed.MOD_ID, "item_group_main"));
+    public static final RegistryKey<ItemGroup> SQUEEZED_ITEMGROUP_MCD_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Squeezed.MOD_ID, "item_group_mcd"));
+    public static final ItemGroup SQUEEZED_ITEMGROUP_MCD = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModBlocks.BLIGHTED_GRASS.asItem()))
+            .displayName(Text.translatable("itemGroup.squeezed.mcdungeonrips"))
+            .build();
+    public static final ItemGroup SQUEEZED_ITEMGROUP_MAIN = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModBlocks.BLIGHTED_GRASS.asItem()))
             .displayName(Text.translatable("itemGroup.squeezed"))
             .build();

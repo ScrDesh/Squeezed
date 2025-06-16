@@ -39,13 +39,16 @@ public class ModBlocks {
     }
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ModItems.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
+        ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MCD_KEY).register((itemGroup) -> {
             itemGroup.add(ModBlocks.BLIGHTED_GRASS.asItem());
             itemGroup.add(ModBlocks.SMOOTH_END_STONE.asItem());
             itemGroup.add(ModBlocks.SETTLED_END_STONE.asItem());
             itemGroup.add(ModBlocks.LAYERED_END_STONE.asItem());
             itemGroup.add(ModBlocks.LAYERED_VOID_SHALE.asItem());
             itemGroup.add(ModBlocks.VOID_SHALE.asItem());
+            itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
+        });
+        ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MAIN_KEY).register((itemGroup) -> {
             itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
         });
     }
