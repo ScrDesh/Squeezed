@@ -28,6 +28,11 @@ public class ModItems {
             firestick::new, // uses your custom item class
             new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
     );
+    public static final Item FROZENSTICK = ModItems.register(
+            "frozenstick",
+            frozenstick::new, // uses your custom item class
+            new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
+    );
 
     public static void initialize() {
         // Register the group.
@@ -37,6 +42,7 @@ public class ModItems {
         // Register items to the custom item group.
         ItemGroupEvents.modifyEntriesEvent(SQUEEZED_ITEMGROUP_MAIN_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.FIRESTICK);
+            itemGroup.add(ModItems.FROZENSTICK);
         });
     }
 

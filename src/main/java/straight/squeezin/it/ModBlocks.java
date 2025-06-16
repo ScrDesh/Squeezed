@@ -49,7 +49,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
         });
         ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MAIN_KEY).register((itemGroup) -> {
-            itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
+
         });
     }
 
