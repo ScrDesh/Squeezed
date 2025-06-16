@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "":
+      {
+        "model": "squeezed:block/tektite_pillar"
+      }
+
+  }
+}
