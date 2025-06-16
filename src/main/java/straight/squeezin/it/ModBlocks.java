@@ -46,6 +46,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.LAYERED_END_STONE.asItem());
             itemGroup.add(ModBlocks.LAYERED_VOID_SHALE.asItem());
             itemGroup.add(ModBlocks.VOID_SHALE.asItem());
+            itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
         });
     }
 
@@ -82,6 +83,12 @@ public class ModBlocks {
     );
     public static final Block VOID_SHALE = register(
             "void_shale",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static final Block TEKTITE_PILLAR = register(
+            "tektite_pillar",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE),
             true
