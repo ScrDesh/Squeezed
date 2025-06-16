@@ -23,6 +23,12 @@ public class ModItems {
         return item;
     }
 
+    public static final Item FIRESTICK = ModItems.register(
+            "firestick",
+            firestick::new, // uses your custom item class
+            new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
+    );
+
     public static void initialize() {
         // Register the group.
         Registry.register(Registries.ITEM_GROUP, SQUEEZED_ITEMGROUP_MAIN_KEY, SQUEEZED_ITEMGROUP_MAIN);
