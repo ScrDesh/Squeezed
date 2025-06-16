@@ -53,7 +53,7 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.squeezed.mcdungeonrips"))
             .build();
     public static final ItemGroup SQUEEZED_ITEMGROUP_MAIN = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModBlocks.BLIGHTED_GRASS.asItem()))
+            .icon(() -> new ItemStack(ModItems.FIRESTICK.asItem()))
             .displayName(Text.translatable("itemGroup.squeezed"))
             .build();
 }
