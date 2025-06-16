@@ -35,7 +35,9 @@ public class ModItems {
         Registry.register(Registries.ITEM_GROUP, SQUEEZED_ITEMGROUP_MCD_KEY, SQUEEZED_ITEMGROUP_MCD);
 
         // Register items to the custom item group.
-        ItemGroupEvents.modifyEntriesEvent(SQUEEZED_ITEMGROUP_MCD_KEY).register(itemGroup -> {});
+        ItemGroupEvents.modifyEntriesEvent(SQUEEZED_ITEMGROUP_MAIN_KEY).register(itemGroup -> {
+            itemGroup.add(ModItems.FIRESTICK);
+        });
     }
 
     public static final RegistryKey<ItemGroup> SQUEEZED_ITEMGROUP_MAIN_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Squeezed.MOD_ID, "item_group_main"));

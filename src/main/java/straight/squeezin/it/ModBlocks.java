@@ -57,43 +57,43 @@ public class ModBlocks {
     public static final Block BLIGHTED_GRASS = register(
             "blighted_grass",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.NYLIUM),
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.NYLIUM),
             true
     );
     public static final Block SMOOTH_END_STONE = register(
             "smooth_end_stone",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE),
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
             true
     );
     public static final Block SETTLED_END_STONE = register(
             "settled_end_stone",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE),
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
             true
     );
     public static final Block LAYERED_END_STONE = register(
             "layered_end_stone",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE),
+            AbstractBlock.Settings.create().requiresTool().strength(2.25f,9).sounds(BlockSoundGroup.STONE),
             true
     );
     public static final Block LAYERED_VOID_SHALE = register(
             "layered_void_shale",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE),
+            AbstractBlock.Settings.create().requiresTool().strength(2.25f,9).sounds(BlockSoundGroup.DEEPSLATE),
             true
     );
     public static final Block VOID_SHALE = register(
             "void_shale",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE),
+            AbstractBlock.Settings.create().requiresTool().strength(1.5f,9).sounds(BlockSoundGroup.DEEPSLATE),
             true
     );
     public static final Block TEKTITE_PILLAR = register(
             "tektite_pillar",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE),
+            AbstractBlock.Settings.create().requiresTool().strength(1,15).sounds(BlockSoundGroup.BASALT),
             true
     );
 }
