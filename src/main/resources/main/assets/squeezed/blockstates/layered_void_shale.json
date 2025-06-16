@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "squeezed:block/layered_void_shale"
+      },
+      {
+        "model": "squeezed:block/layered_void_shale",
+        "y": 180
+      },
+      {
+        "model": "squeezed:block/layered_void_shale_mirrored"
+      },
+      {
+        "model": "squeezed:block/layered_void_shale_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}
