@@ -1,4 +1,4 @@
-package straight.squeezin.it;
+package straight.squeezin.it.item;
 
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
