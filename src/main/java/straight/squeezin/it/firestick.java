@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
@@ -28,4 +29,12 @@ public class firestick extends Item {
         }
         return ActionResult.SUCCESS;
     }
+
+    @Override public ActionResult useOnBlock(ItemUsageContext context) {
+        PlayerEntity eventPlayer = context.getPlayer();
+        if (eventPlayer == null) {return ActionResult.FAIL;}
+        if (context.getPlayer().getItemCooldownManager().isCoolingDown(context.getStack())) {return ActionResult.FAIL;}
+
+        return ActionResult.SUCCESS;
+        }
 }
