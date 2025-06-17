@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "squeezed:block/tektite_pillars_top",
     "side": "squeezed:block/tektite_pillars",
-    "top": "squeezed:block/tektite_pillars_top"
+    "end": "squeezed:block/tektite_pillars_top"
   }
 }

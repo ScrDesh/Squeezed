@@ -9,5 +9,15 @@
   "item.squeezed.void_shale": "Void Shale",
   "item.squeezed.tektite_pillar": "Tektite Pillar",
   "item.squeezed.firestick": "Fire Stick",
-  "item.squeezed.frozenstick": "Frozen Stick"
+  "item.squeezed.frozenstick": "Frozen Stick",
+  "item.squeezed.end_stone_pillar": "End Stone Pillar",
+  "item.squeezed.end_stone_tiles": "End Stone Tiles",
+  "item.squeezed.void_lure": "Void Lure",
+  "item.squeezed.blighted_log": "Blighted Log",
+  "item.squeezed.blighted_wood": "Blighted Wood",
+  "item.squeezed.stripped_blighted_log": "Stripped Blighted Log",
+  "item.squeezed.stripped_blighted_wood": "Stripped Blighted Wood",
+  "item.squeezed.blighted_planks": "Blighted Planks",
+  "item.squeezed.blighted_leaves": "Blighted Leaves",
+  "item.squeezed.blighted_vines": "Blighted Vines"
 }

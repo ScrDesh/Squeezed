@@ -7,6 +7,8 @@
     "squeezed:layered_end_stone",
     "squeezed:layered_void_shale",
     "squeezed:void_shale",
-    "squeezed:tektite_pillar"
+    "squeezed:tektite_pillar",
+    "squeezed:end_stone_pillar",
+    "squeezed:end_stone_tiles"
   ]
 }

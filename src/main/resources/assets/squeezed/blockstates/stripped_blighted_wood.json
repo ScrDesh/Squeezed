@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "axis=x":
+    {
+      "model": "squeezed:block/stripped_blighted_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y":
+    {
+      "model": "squeezed:block/stripped_blighted_wood"
+    },
+    "axis=z":
+    {
+      "model": "squeezed:block/stripped_blighted_wood_horizontal",
+      "x": 90
+    }
+  }
+}
