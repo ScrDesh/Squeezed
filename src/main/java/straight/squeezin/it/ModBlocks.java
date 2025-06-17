@@ -47,6 +47,15 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.LAYERED_VOID_SHALE.asItem());
             itemGroup.add(ModBlocks.VOID_SHALE.asItem());
             itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
+            itemGroup.add(ModBlocks.END_STONE_PILLAR.asItem());
+            itemGroup.add(ModBlocks.END_STONE_TILES.asItem());
+            itemGroup.add(ModBlocks.VOID_LURE.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_LOG.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_WOOD.asItem());
+            itemGroup.add(ModBlocks.STRIPPED_BLIGHTED_LOG.asItem());
+            itemGroup.add(ModBlocks.STRIPPED_BLIGHTED_WOOD.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_PLANKS.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_LEAVES.asItem());
         });
         ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MAIN_KEY).register((itemGroup) -> {
 
@@ -92,8 +101,62 @@ public class ModBlocks {
     );
     public static final Block TEKTITE_PILLAR = register(
             "tektite_pillar",
-            Block::new,
+            PillarBlock::new,
             AbstractBlock.Settings.create().requiresTool().strength(1,15).sounds(BlockSoundGroup.BASALT),
+            true
+    );
+    public static final Block END_STONE_PILLAR = register(
+            "end_stone_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static final Block END_STONE_TILES = register(
+            "end_stone_tiles",
+            Block::new,
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static final Block VOID_LURE = register(
+            "void_lure",
+            Block::new,
+            AbstractBlock.Settings.create().strength(1,1).emissiveLighting((a,b,c)->true).luminance(a->15).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block BLIGHTED_PLANKS = register(
+            "blighted_planks",
+            Block::new,
+            AbstractBlock.Settings.create().strength(2,3).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block BLIGHTED_LOG = register(
+            "blighted_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block BLIGHTED_WOOD = register(
+            "blighted_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block STRIPPED_BLIGHTED_LOG = register(
+            "stripped_blighted_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block STRIPPED_BLIGHTED_WOOD = register(
+            "stripped_blighted_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            true
+    );
+    public static final Block BLIGHTED_LEAVES = register(
+            "blighted_leaves",
+            PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES),
             true
     );
 }

@@ -1,6 +1,7 @@
 package straight.squeezin.it
 
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.registry.*
 import org.slf4j.LoggerFactory
 
 object Squeezed : ModInitializer {
@@ -13,5 +14,7 @@ object Squeezed : ModInitializer {
 		logger.info("Hello Fabric world!")
 		ModBlocks.initialize()
 		ModItems.initialize()
+		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_LOG,ModBlocks.STRIPPED_BLIGHTED_LOG)
+		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_WOOD,ModBlocks.STRIPPED_BLIGHTED_WOOD)
 	}
 }
