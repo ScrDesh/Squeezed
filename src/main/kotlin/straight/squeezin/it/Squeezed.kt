@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import net.fabricmc.fabric.api.registry.*
 import org.slf4j.LoggerFactory
+import straight.squeezin.it.statuseffects.ModEffects
 
 object Squeezed : ModInitializer {
     private val logger = LoggerFactory.getLogger("squeezed")
@@ -20,6 +21,7 @@ object Squeezed : ModInitializer {
 		}
 		ModBlocks.initialize()
 		ModItems.initialize()
+		ModEffects.registerEffects()
 		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_LOG,ModBlocks.STRIPPED_BLIGHTED_LOG)
 		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_WOOD,ModBlocks.STRIPPED_BLIGHTED_WOOD)
 	}

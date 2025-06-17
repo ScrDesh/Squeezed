@@ -19,5 +19,6 @@
   "item.squeezed.stripped_blighted_wood": "Stripped Blighted Wood",
   "item.squeezed.blighted_planks": "Blighted Planks",
   "item.squeezed.blighted_leaves": "Blighted Leaves",
-  "item.squeezed.blighted_vines": "Blighted Vines"
+  "item.squeezed.blighted_vines": "Blighted Vines",
+  "effect.squeezed.burn": "Burning"
 }
