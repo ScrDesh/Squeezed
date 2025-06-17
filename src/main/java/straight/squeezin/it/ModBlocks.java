@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.sound.*;
 import net.minecraft.util.*;
+import straight.squeezin.it.block.*;
 
 import java.util.function.Function;
 
@@ -56,6 +57,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.STRIPPED_BLIGHTED_WOOD.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_PLANKS.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_LEAVES.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_VINES.asItem());
         });
         ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MAIN_KEY).register((itemGroup) -> {
 
@@ -155,8 +157,14 @@ public class ModBlocks {
     );
     public static final Block BLIGHTED_LEAVES = register(
             "blighted_leaves",
-            PillarBlock::new,
+            BlightedLeavesBlock::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES),
+            true
+    );
+    public static final Block BLIGHTED_VINES = register(
+            "blighted_vines",
+            VineBlock::new,
+            AbstractBlock.Settings.copy(Blocks.TWISTING_VINES),
             true
     );
 }

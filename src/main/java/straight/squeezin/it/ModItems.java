@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.*;
+import straight.squeezin.it.item.*;
 
 import java.util.function.Function;
 

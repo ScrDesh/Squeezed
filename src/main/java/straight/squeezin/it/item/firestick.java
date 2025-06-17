@@ -1,4 +1,4 @@
-package straight.squeezin.it;
+package straight.squeezin.it.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

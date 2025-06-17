@@ -9,5 +9,6 @@ object SqueezedClient : ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 		// Gets Squeezed Out.
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLIGHTED_LEAVES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLIGHTED_VINES, RenderLayer.getCutout());
 	}
 }
