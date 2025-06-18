@@ -22,14 +22,20 @@ public class frozenstick extends Item {
         }
         if (!user.getWorld().isClient) {
 
-            StatusEffectInstance burnEffectInstance = new StatusEffectInstance(
+            StatusEffectInstance defDownEffectInstance = new StatusEffectInstance(
                     ModEffects.DEFDOWN,
-                    300,
+                    200,
+                    1
+            );
+            StatusEffectInstance freezeEffectInstance = new StatusEffectInstance(
+                    ModEffects.FREEZE,
+                    200,
                     1
             );
 
-            entity.addStatusEffect(burnEffectInstance);
-            entity.setFrozenTicks(380);
+            entity.addStatusEffect(defDownEffectInstance);
+            entity.addStatusEffect(freezeEffectInstance);
+            entity.setFrozenTicks(150);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             stack.damage(1, user, slot);

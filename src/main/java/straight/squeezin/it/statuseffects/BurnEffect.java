@@ -7,6 +7,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.random.Random;
+import straight.squeezin.it.ModDamageTypes;
 
 import static java.lang.Math.max;
 
@@ -15,7 +16,15 @@ public class BurnEffect extends StatusEffect {
         super(category, color);
     }
     @Override public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
-        if (!(entity.isSubmergedInWater()) &&
+        if (entity.hasStatusEffect(ModEffects.FREEZE)) {
+            entity.removeStatusEffect(ModEffects.FREEZE);
+            entity.removeStatusEffect(ModEffects.BURN);
+
+            entity.damage(world, world.getDamageSources().create(ModDamageTypes.ICEBREAKING), 7);
+            entity.setFrozenTicks(0);
+            entity.setFireTicks(0);
+        }
+        else if (!(entity.isSubmergedInWater()) &&
                 !(world.isRaining() && world.isSkyVisible(entity.getBlockPos()))) {
             entity.setFireTicks(4);
             entity.damage(world, world.getDamageSources().onFire(), 1.0f + amplifier);
