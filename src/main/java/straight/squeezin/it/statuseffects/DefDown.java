@@ -17,7 +17,7 @@ public class DefDown extends StatusEffect {
         );
 
         this.addAttributeModifier(
-                EntityAttributes.ARMOR, Identifier.of("squeezed", "armortough-down"),
+                EntityAttributes.ARMOR_TOUGHNESS, Identifier.of("squeezed", "armortough-down"),
                 -2,
                 EntityAttributeModifier.Operation.ADD_VALUE
         );

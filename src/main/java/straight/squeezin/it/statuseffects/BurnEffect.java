@@ -17,6 +17,7 @@ public class BurnEffect extends StatusEffect {
     @Override public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (!(entity.isSubmergedInWater()) &&
                 !(world.isRaining() && world.isSkyVisible(entity.getBlockPos()))) {
+            entity.setFireTicks(4);
             entity.damage(world, world.getDamageSources().onFire(), 1.0f + amplifier);
             spawnFlameParticles(world, entity, (max(amplifier*6, 18)));
         }

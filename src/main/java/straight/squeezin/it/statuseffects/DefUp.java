@@ -17,7 +17,7 @@ public class DefUp extends StatusEffect {
         );
 
         this.addAttributeModifier(
-                EntityAttributes.ARMOR, Identifier.of("squeezed", "armortough-up"),
+                EntityAttributes.ARMOR_TOUGHNESS, Identifier.of("squeezed", "armortough-up"),
                 2,
                 EntityAttributeModifier.Operation.ADD_VALUE
         );
