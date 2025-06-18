@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "squeezed:block/coagulated_nacre"
+      },
+      {
+        "model": "squeezed:block/coagulated_nacre",
+        "y": 90
+      },
+      {
+        "model": "squeezed:block/coagulated_nacre",
+        "y": 180
+      },
+      {
+        "model": "squeezed:block/coagulated_nacre",
+        "y": 270
+      }
+    ]
+  }
+}

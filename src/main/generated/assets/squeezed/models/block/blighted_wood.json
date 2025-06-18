@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "squeezed:block/blighted_log",
+    "side": "squeezed:block/blighted_log"
+  }
+}

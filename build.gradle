@@ -79,7 +79,9 @@ jar {
 }
 
 fabricApi {
-	configureDataGeneration()
+	configureDataGeneration(){
+		client = true
+	}
 }
 
 // configure the maven publication

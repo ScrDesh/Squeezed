@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "squeezed:coagulated_nacre",
-  "result": {
-    "count": 1,
-    "id": "squeezed:dull_nacre"
-  }
-}

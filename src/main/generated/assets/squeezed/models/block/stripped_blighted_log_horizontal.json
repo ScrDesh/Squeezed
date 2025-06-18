@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "squeezed:block/stripped_blighted_log_top",
+    "side": "squeezed:block/stripped_blighted_log"
+  }
+}

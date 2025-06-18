@@ -22,7 +22,8 @@
 			}
 		],
 		"fabric-datagen": [
-			"straight.squeezin.it.ModDatagen"
+			"straight.squeezin.it.ModDatagen",
+			"straight.squeezin.it.client.ModDatagen"
 		],
 		"client": [
 			{
