@@ -21,5 +21,8 @@
   "item.squeezed.blighted_vines": "Blighted Vines",
   "effect.squeezed.burn": "Scorching",
   "effect.squeezed.defup": "Defense Up",
-  "effect.squeezed.defdown": "Defense Down"
+  "effect.squeezed.defdown": "Defense Down",
+  "effect.squeezed.freezing": "Freezing",
+  "death.attack.squeezed.icebreaking": "%1$s's ice was broken",
+  "death.attack.squeezed.icebreaking.player": "%2$s broke %1$s's ice"
 }
