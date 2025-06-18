@@ -4,6 +4,7 @@ import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import straight.squeezin.it.statuseffects.ModEffects;
+
 import java.util.Optional;
 
 
@@ -27,7 +30,13 @@ public class firestick extends Item {
             return ActionResult.FAIL;
         }
         if (!user.getWorld().isClient) {
-            entity.setFireTicks(100); // Set entity on fire for 5 seconds
+            StatusEffectInstance burnEffectInstance = new StatusEffectInstance(
+                    ModEffects.BURN,  // Your registered effect
+                    100,                  // Duration (200 ticks = 10 seconds)
+                    1                     // Amplifier (0 = level 1, 1 = level 2, etc.)
+            );
+
+            entity.addStatusEffect(burnEffectInstance);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             stack.damage(1, user, slot);

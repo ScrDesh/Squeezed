@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> BURN = registerStatusEffect("burn",
-            new BurnEffect(StatusEffectCategory.NEUTRAL, 0x36ebab));
+            new BurnEffect(StatusEffectCategory.NEUTRAL, 0x444444));
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
