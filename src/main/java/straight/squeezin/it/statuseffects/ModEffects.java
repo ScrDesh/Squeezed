@@ -11,6 +11,10 @@ import net.minecraft.util.Identifier;
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> BURN = registerStatusEffect("burn",
             new BurnEffect(StatusEffectCategory.NEUTRAL, 0x444444));
+    public static final RegistryEntry<StatusEffect> DEFUP = registerStatusEffect("defup",
+            new DefUp(StatusEffectCategory.BENEFICIAL, 0x00e2ff));
+    public static final RegistryEntry<StatusEffect> DEFDOWN = registerStatusEffect("defdown",
+            new DefDown(StatusEffectCategory.HARMFUL, 0xff001e));
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {

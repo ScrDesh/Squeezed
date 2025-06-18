@@ -14,7 +14,6 @@ public class BurnEffect extends StatusEffect {
     public BurnEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
-
     @Override public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (!(entity.isSubmergedInWater()) &&
                 !(world.isRaining() && world.isSkyVisible(entity.getBlockPos()))) {

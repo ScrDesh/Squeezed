@@ -2,11 +2,13 @@ package straight.squeezin.it.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import straight.squeezin.it.statuseffects.ModEffects;
 
 
 public class frozenstick extends Item {
@@ -19,6 +21,14 @@ public class frozenstick extends Item {
             return ActionResult.FAIL;
         }
         if (!user.getWorld().isClient) {
+
+            StatusEffectInstance burnEffectInstance = new StatusEffectInstance(
+                    ModEffects.DEFDOWN,
+                    300,
+                    1
+            );
+
+            entity.addStatusEffect(burnEffectInstance);
             entity.setFrozenTicks(380);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;

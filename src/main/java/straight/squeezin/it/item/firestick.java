@@ -31,9 +31,9 @@ public class firestick extends Item {
         }
         if (!user.getWorld().isClient) {
             StatusEffectInstance burnEffectInstance = new StatusEffectInstance(
-                    ModEffects.BURN,  // Your registered effect
-                    100,                  // Duration (200 ticks = 10 seconds)
-                    1                     // Amplifier (0 = level 1, 1 = level 2, etc.)
+                    ModEffects.BURN,
+                    100,
+                    1
             );
 
             entity.addStatusEffect(burnEffectInstance);
