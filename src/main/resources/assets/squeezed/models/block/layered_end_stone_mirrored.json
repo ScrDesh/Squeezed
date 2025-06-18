@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "squeezed:block/void_shale_top",
-    "side": "squeezed:block/layered_end_stone_mirrored",
-    "top": "squeezed:block/smooth_end_stone"
-  }
-}

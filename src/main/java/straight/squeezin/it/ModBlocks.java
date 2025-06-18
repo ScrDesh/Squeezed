@@ -41,16 +41,15 @@ public class ModBlocks {
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MCD_KEY).register((itemGroup) -> {
-            itemGroup.add(ModBlocks.BLIGHTED_GRASS.asItem());
             itemGroup.add(ModBlocks.SMOOTH_END_STONE.asItem());
-            itemGroup.add(ModBlocks.SETTLED_END_STONE.asItem());
-            itemGroup.add(ModBlocks.LAYERED_END_STONE.asItem());
-            itemGroup.add(ModBlocks.LAYERED_VOID_SHALE.asItem());
-            itemGroup.add(ModBlocks.VOID_SHALE.asItem());
-            itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
             itemGroup.add(ModBlocks.END_STONE_PILLAR.asItem());
             itemGroup.add(ModBlocks.END_STONE_TILES.asItem());
+            itemGroup.add(ModBlocks.CHISELED_END_STONE.asItem());
+            itemGroup.add(ModBlocks.COAGULATED_NACRE.asItem());
+            itemGroup.add(ModBlocks.DULL_NACRE.asItem());
+            itemGroup.add(ModBlocks.TEKTITE_PILLAR.asItem());
             itemGroup.add(ModBlocks.VOID_LURE.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_GRASS.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_LOG.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_WOOD.asItem());
             itemGroup.add(ModBlocks.STRIPPED_BLIGHTED_LOG.asItem());
@@ -77,34 +76,22 @@ public class ModBlocks {
             AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
             true
     );
-    public static final Block SETTLED_END_STONE = register(
-            "settled_end_stone",
-            Block::new,
-            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
+    public static final Block COAGULATED_NACRE = register(
+            "coagulated_nacre",
+            MudBlock::new,
+            AbstractBlock.Settings.create().requiresTool().strength(1.5f,9).sounds(BlockSoundGroup.CORAL),
             true
     );
-    public static final Block LAYERED_END_STONE = register(
-            "layered_end_stone",
+    public static final Block DULL_NACRE = register(
+            "dull_nacre",
             Block::new,
-            AbstractBlock.Settings.create().requiresTool().strength(2.25f,9).sounds(BlockSoundGroup.STONE),
-            true
-    );
-    public static final Block LAYERED_VOID_SHALE = register(
-            "layered_void_shale",
-            Block::new,
-            AbstractBlock.Settings.create().requiresTool().strength(2.25f,9).sounds(BlockSoundGroup.DEEPSLATE),
-            true
-    );
-    public static final Block VOID_SHALE = register(
-            "void_shale",
-            Block::new,
-            AbstractBlock.Settings.create().requiresTool().strength(1.5f,9).sounds(BlockSoundGroup.DEEPSLATE),
+            AbstractBlock.Settings.create().requiresTool().strength(1.5f,9).sounds(BlockSoundGroup.CALCITE),
             true
     );
     public static final Block TEKTITE_PILLAR = register(
             "tektite_pillar",
             PillarBlock::new,
-            AbstractBlock.Settings.create().requiresTool().strength(1,15).sounds(BlockSoundGroup.BASALT),
+            AbstractBlock.Settings.create().requiresTool().strength(1,15).sounds(BlockSoundGroup.DEEPSLATE_TILES),
             true
     );
     public static final Block END_STONE_PILLAR = register(
@@ -119,6 +106,12 @@ public class ModBlocks {
             AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
             true
     );
+    public static final Block CHISELED_END_STONE = register(
+            "chiseled_end_stone",
+            Block::new,
+            AbstractBlock.Settings.create().requiresTool().strength(3,9).sounds(BlockSoundGroup.STONE),
+            true
+    );
     public static final Block VOID_LURE = register(
             "void_lure",
             Block::new,
@@ -128,43 +121,43 @@ public class ModBlocks {
     public static final Block BLIGHTED_PLANKS = register(
             "blighted_planks",
             Block::new,
-            AbstractBlock.Settings.create().strength(2,3).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create().strength(2,3).sounds(BlockSoundGroup.NETHER_WOOD),
             true
     );
     public static final Block BLIGHTED_LOG = register(
             "blighted_log",
             PillarBlock::new,
-            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.NETHER_WOOD),
             true
     );
     public static final Block BLIGHTED_WOOD = register(
             "blighted_wood",
             PillarBlock::new,
-            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.NETHER_WOOD),
             true
     );
     public static final Block STRIPPED_BLIGHTED_LOG = register(
             "stripped_blighted_log",
             PillarBlock::new,
-            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.NETHER_WOOD),
             true
     );
     public static final Block STRIPPED_BLIGHTED_WOOD = register(
             "stripped_blighted_wood",
             PillarBlock::new,
-            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.WOOD),
+            AbstractBlock.Settings.create().strength(2,2).sounds(BlockSoundGroup.NETHER_WOOD),
             true
     );
     public static final Block BLIGHTED_LEAVES = register(
             "blighted_leaves",
             BlightedLeavesBlock::new,
-            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES),
+            AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES),
             true
     );
     public static final Block BLIGHTED_VINES = register(
             "blighted_vines",
-            VineBlock::new,
-            AbstractBlock.Settings.copy(Blocks.TWISTING_VINES),
+            BlightedVineBlock::new,
+            AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES),
             true
     );
 }

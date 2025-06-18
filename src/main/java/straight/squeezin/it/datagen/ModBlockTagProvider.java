@@ -20,12 +20,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.END_STONE_PILLAR)
                 .add(ModBlocks.END_STONE_TILES)
+                .add(ModBlocks.CHISELED_END_STONE)
                 .add(ModBlocks.BLIGHTED_GRASS)
                 .add(ModBlocks.SMOOTH_END_STONE)
-                .add(ModBlocks.SETTLED_END_STONE)
-                .add(ModBlocks.LAYERED_END_STONE)
-                .add(ModBlocks.LAYERED_VOID_SHALE)
-                .add(ModBlocks.VOID_SHALE);
+                .add(ModBlocks.COAGULATED_NACRE)
+                .add(ModBlocks.DULL_NACRE);
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.BLIGHTED_PLANKS)
                 .add(ModBlocks.BLIGHTED_LOG)
@@ -37,10 +36,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLIGHTED_LEAVES);
         getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE)
                 .add(ModBlocks.SMOOTH_END_STONE)
-                .add(ModBlocks.SETTLED_END_STONE)
-                .add(ModBlocks.LAYERED_END_STONE)
-                .add(ModBlocks.LAYERED_VOID_SHALE)
-                .add(ModBlocks.VOID_SHALE);
+                .add(ModBlocks.COAGULATED_NACRE);
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.BLIGHTED_PLANKS);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)

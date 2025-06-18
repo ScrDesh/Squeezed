@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "squeezed:block/coagulated_nacre_top",
+    "side": "squeezed:block/coagulated_nacre",
+    "top": "squeezed:block/coagulated_nacre_top"
+  }
+}

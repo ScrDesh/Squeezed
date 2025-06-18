@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "squeezed:layered_end_stone"
+          "name": "squeezed:chiseled_end_stone"
         }
       ],
       "rolls": 1.0

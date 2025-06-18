@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coagulated_nacre": {
+      "conditions": {
+        "items": [
+          {
+            "items": "squeezed:coagulated_nacre"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "squeezed:dull_nacre_from_coagulated_nacre_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coagulated_nacre"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "squeezed:dull_nacre_from_coagulated_nacre_stonecutting"
+    ]
+  }
+}

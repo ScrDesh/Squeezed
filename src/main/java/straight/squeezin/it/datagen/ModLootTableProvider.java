@@ -24,10 +24,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BLIGHTED_VINES, dropsWithSilkTouchOrShears(ModBlocks.BLIGHTED_VINES.asItem()));
         addDrop(ModBlocks.END_STONE_PILLAR);
         addDrop(ModBlocks.END_STONE_TILES);
+        addDrop(ModBlocks.CHISELED_END_STONE);
         addDrop(ModBlocks.SMOOTH_END_STONE);
-        addDrop(ModBlocks.SETTLED_END_STONE);
-        addDrop(ModBlocks.LAYERED_END_STONE);
-        addDrop(ModBlocks.LAYERED_VOID_SHALE);
-        addDrop(ModBlocks.VOID_SHALE);
+        addDrop(ModBlocks.COAGULATED_NACRE);
+        addDrop(ModBlocks.DULL_NACRE);
     }
 }
