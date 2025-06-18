@@ -1,0 +1,10 @@
+// 1.21.5	-999999999-01-01T00:00:00	Squeezed/Tags for minecraft:block
+098af696fa0d7ee6ab022f96b620d7d30fa63b84 data/minecraft/tags/block/climbable.json
+2684c5539be2d37caf098caa4887ec13d60fe8e7 data/minecraft/tags/block/dragon_immune.json
+42c8e6d514e4ede5c94830b21f66117b9b8c8dcf data/minecraft/tags/block/leaves.json
+b036473d5167d89d9de6fe68507434a79fd82686 data/minecraft/tags/block/logs_that_burn.json
+fbd0dbd4f6c2b25b133de8ec98c24a9ff999b248 data/minecraft/tags/block/mineable/axe.json
+ee6207696f4ef545755de91d102cbacb1b93c40e data/minecraft/tags/block/mineable/hoe.json
+d3dc23155587760b34d9d82df550230b6c7e3cc3 data/minecraft/tags/block/mineable/pickaxe.json
+c00f6374c05f7466ff2136ac873d7148e5523a7c data/minecraft/tags/block/planks.json
+b036473d5167d89d9de6fe68507434a79fd82686 data/squeezed/tags/block/blighted_logs.json

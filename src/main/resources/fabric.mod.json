@@ -21,6 +21,9 @@
 				"adapter": "kotlin"
 			}
 		],
+		"fabric-datagen": [
+			"straight.squeezin.it.ModDatagen"
+		],
 		"client": [
 			{
 				"value": "straight.squeezin.it.SqueezedClient",
