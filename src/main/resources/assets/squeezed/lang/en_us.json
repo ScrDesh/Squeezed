@@ -24,8 +24,8 @@
   "item.squeezed.ticklestick": "Tickle Stick",
 
   "effect.squeezed.burn": "Scorching",
-  "effect.squeezed.defup": "Defense Up",
-  "effect.squeezed.defdown": "Defense Down",
+  "effect.squeezed.defup": "Bolstered",
+  "effect.squeezed.defdown": "Shattered",
   "effect.squeezed.freezing": "Freezing",
 
   "death.attack.squeezed.icebreaking": "%1$s's ice was broken",
