@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "squeezed:item/blighted_sapling"
+    "layer0": "squeezed:block/blighted_sapling"
   }
 }

@@ -29,13 +29,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_BLIGHTED_LOG).log(ModBlocks.STRIPPED_BLIGHTED_LOG).wood(ModBlocks.STRIPPED_BLIGHTED_WOOD);
         blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_BOTTOM_TOP, ModBlocks.BLIGHTED_GRASS);
         blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.END_FOR_TOP_CUBE_COLUMN, ModBlocks.COAGULATED_NACRE);
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLIGHTED_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.BLIGHTED_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator){
         itemModelGenerator.register(ModBlocks.BLIGHTED_VINES.asItem(), Models.GENERATED);
-        itemModelGenerator.register(ModBlocks.BLIGHTED_SAPLING.asItem(), Models.GENERATED);
     }
 
     @Override
