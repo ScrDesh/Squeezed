@@ -11,9 +11,9 @@ import net.minecraft.util.Hand;
 import straight.squeezin.it.statuseffects.ModEffects;
 
 
-public class frozenstick extends Item {
+public class ticklestick extends Item {
 
-    public frozenstick(Settings settings) {
+    public ticklestick(Settings settings) {
         super(settings.maxDamage(10));
     }
     @Override public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
@@ -22,14 +22,13 @@ public class frozenstick extends Item {
         }
         if (!user.getWorld().isClient) {
 
-            StatusEffectInstance freezeEffectInstance = new StatusEffectInstance(
-                    ModEffects.FREEZE,
+            StatusEffectInstance defDownEffectInstance = new StatusEffectInstance(
+                    ModEffects.DEFDOWN,
                     300,
-                    1
+                    2
             );
 
-            entity.addStatusEffect(freezeEffectInstance);
-            entity.setFrozenTicks(150);
+            entity.addStatusEffect(defDownEffectInstance);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             stack.damage(1, user, slot);

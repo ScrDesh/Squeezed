@@ -1,13 +1,12 @@
 {
   "itemGroup.squeezed.mcdungeonrips": "Squeezed's MCD Items",
   "itemGroup.squeezed": "Squeezed",
+
   "item.squeezed.blighted_grass": "Blighted Grass",
   "item.squeezed.smooth_end_stone": "Smooth End Stone",
   "item.squeezed.coagulated_nacre": "Coagulated Nacre",
   "item.squeezed.dull_nacre": "Dull Nacre",
   "item.squeezed.tektite_pillar": "Tektite Pillar",
-  "item.squeezed.firestick": "Fire Stick",
-  "item.squeezed.frozenstick": "Frozen Stick",
   "item.squeezed.end_stone_pillar": "End Stone Pillar",
   "item.squeezed.end_stone_tiles": "End Stone Tiles",
   "item.squeezed.chiseled_end_stone": "Chiseled End Stone",
@@ -19,10 +18,16 @@
   "item.squeezed.blighted_planks": "Blighted Planks",
   "item.squeezed.blighted_leaves": "Blighted Leaves",
   "item.squeezed.blighted_vines": "Blighted Vines",
+
+  "item.squeezed.firestick": "Fire Stick",
+  "item.squeezed.frozenstick": "Ice Stick",
+  "item.squeezed.ticklestick": "Tickle Stick",
+
   "effect.squeezed.burn": "Scorching",
   "effect.squeezed.defup": "Defense Up",
   "effect.squeezed.defdown": "Defense Down",
   "effect.squeezed.freezing": "Freezing",
+
   "death.attack.squeezed.icebreaking": "%1$s's ice was broken",
   "death.attack.squeezed.icebreaking.player": "%2$s broke %1$s's ice"
 }
