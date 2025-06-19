@@ -31,5 +31,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_BLIGHTED_LOG.asItem())
                 .add(ModBlocks.BLIGHTED_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_BLIGHTED_WOOD.asItem());
+        getOrCreateTagBuilder(ItemTags.SAPLINGS)
+                .add(ModBlocks.BLIGHTED_SAPLING.asItem());
     }
 }

@@ -53,5 +53,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_BLIGHTED_LOG)
                 .add(ModBlocks.BLIGHTED_WOOD)
                 .add(ModBlocks.STRIPPED_BLIGHTED_WOOD);
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(ModBlocks.BLIGHTED_SAPLING);
     }
 }

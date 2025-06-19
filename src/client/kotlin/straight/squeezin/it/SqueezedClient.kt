@@ -10,5 +10,6 @@ object SqueezedClient : ClientModInitializer {
 		// Gets Squeezed Out.
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLIGHTED_LEAVES, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLIGHTED_VINES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLIGHTED_SAPLING, RenderLayer.getCutout());
 	}
 }

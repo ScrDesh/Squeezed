@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "squeezed:block/blighted_sapling"
+  }
+}

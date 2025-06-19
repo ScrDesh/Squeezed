@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.Models;
 import net.minecraft.client.data.TexturedModel;
 import straight.squeezin.it.ModBlocks;
 import straight.squeezin.it.ModItems;
@@ -28,11 +29,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_BLIGHTED_LOG).log(ModBlocks.STRIPPED_BLIGHTED_LOG).wood(ModBlocks.STRIPPED_BLIGHTED_WOOD);
         blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_BOTTOM_TOP, ModBlocks.BLIGHTED_GRASS);
         blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.END_FOR_TOP_CUBE_COLUMN, ModBlocks.COAGULATED_NACRE);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLIGHTED_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator){
-        itemModelGenerator.register(ModBlocks.BLIGHTED_VINES.asItem());
+        itemModelGenerator.register(ModBlocks.BLIGHTED_VINES.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.BLIGHTED_SAPLING.asItem(), Models.GENERATED);
     }
 
     @Override

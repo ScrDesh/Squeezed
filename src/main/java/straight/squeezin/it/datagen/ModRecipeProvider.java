@@ -42,6 +42,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "";
+        return "Squeezed Recipe Provider";
     }
 }

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import net.fabricmc.fabric.api.registry.*
 import org.slf4j.LoggerFactory
 import straight.squeezin.it.statuseffects.ModEffects
+import straight.squeezin.it.world.gen.ModWorldGeneration
 
 object Squeezed : ModInitializer {
     private val logger = LoggerFactory.getLogger("squeezed")
@@ -22,7 +23,15 @@ object Squeezed : ModInitializer {
 		ModBlocks.initialize()
 		ModItems.initialize()
 		ModEffects.registerEffects()
+		ModWorldGeneration.generateModWorldGen()
 		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_LOG,ModBlocks.STRIPPED_BLIGHTED_LOG)
 		StrippableBlockRegistry.register(ModBlocks.BLIGHTED_WOOD,ModBlocks.STRIPPED_BLIGHTED_WOOD)
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BLIGHTED_LOG,5,5)
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_BLIGHTED_LOG,5,5)
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BLIGHTED_WOOD,5,5)
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_BLIGHTED_WOOD,5,5)
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BLIGHTED_PLANKS,5,20)
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BLIGHTED_LEAVES,30,60)
 	}
 }

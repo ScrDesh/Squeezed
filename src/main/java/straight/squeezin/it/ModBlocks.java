@@ -7,6 +7,7 @@ import net.minecraft.registry.*;
 import net.minecraft.sound.*;
 import net.minecraft.util.*;
 import straight.squeezin.it.block.*;
+import straight.squeezin.it.world.tree.ModSaplingGenerators;
 
 import java.util.function.Function;
 
@@ -57,6 +58,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.BLIGHTED_PLANKS.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_LEAVES.asItem());
             itemGroup.add(ModBlocks.BLIGHTED_VINES.asItem());
+            itemGroup.add(ModBlocks.BLIGHTED_SAPLING.asItem());
         });
         ItemGroupEvents.modifyEntriesEvent(ModItems.SQUEEZED_ITEMGROUP_MAIN_KEY).register((itemGroup) -> {
 
@@ -158,6 +160,12 @@ public class ModBlocks {
             "blighted_vines",
             BlightedVineBlock::new,
             AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES),
+            true
+    );
+    public static final Block BLIGHTED_SAPLING = register(
+            "blighted_sapling",
+            (a) -> new SaplingBlock(ModSaplingGenerators.BLIGHTED, a),
+            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.CHERRY_SAPLING),
             true
     );
 }

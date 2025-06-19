@@ -20,7 +20,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_BLIGHTED_LOG);
         addDrop(ModBlocks.BLIGHTED_WOOD);
         addDrop(ModBlocks.STRIPPED_BLIGHTED_WOOD);
-        addDrop(ModBlocks.BLIGHTED_LEAVES, leavesDrops(ModBlocks.BLIGHTED_LEAVES, Blocks.OAK_SAPLING, 0.0625f));
+        addDrop(ModBlocks.BLIGHTED_LEAVES, leavesDrops(ModBlocks.BLIGHTED_LEAVES, ModBlocks.BLIGHTED_SAPLING, 0.0625f));
         addDrop(ModBlocks.BLIGHTED_VINES, dropsWithSilkTouchOrShears(ModBlocks.BLIGHTED_VINES.asItem()));
         addDrop(ModBlocks.END_STONE_PILLAR);
         addDrop(ModBlocks.END_STONE_TILES);
@@ -28,5 +28,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SMOOTH_END_STONE);
         addDrop(ModBlocks.COAGULATED_NACRE);
         addDrop(ModBlocks.DULL_NACRE);
+        addDrop(ModBlocks.BLIGHTED_SAPLING);
     }
 }
