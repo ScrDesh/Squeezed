@@ -33,7 +33,7 @@ public class ticklestick extends Item {
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             stack.damage(1, user, slot);
 
-            user.getItemCooldownManager().set(stack, 20);
+            user.getItemCooldownManager().set(stack, 60);
         }
         return ActionResult.SUCCESS;
     }

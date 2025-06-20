@@ -41,7 +41,7 @@ public class firestick extends Item {
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             stack.damage(1, user, slot);
 
-            user.getItemCooldownManager().set(stack, 20);
+            user.getItemCooldownManager().set(stack, 60);
         }
         return ActionResult.SUCCESS;
     }
@@ -84,7 +84,7 @@ public class firestick extends Item {
             EquipmentSlot slot = context.getHand() == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
             context.getStack().damage(1, context.getPlayer(), slot);
 
-            context.getPlayer().getItemCooldownManager().set(context.getStack(), 20);
+            context.getPlayer().getItemCooldownManager().set(context.getStack(), 10);
         }
 
         return ActionResult.SUCCESS;
