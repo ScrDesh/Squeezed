@@ -1,19 +1,14 @@
 package straight.squeezin.it.item;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
@@ -24,7 +19,7 @@ import net.minecraft.block.Blocks;
 public class frozenstick extends Item {
 
     public frozenstick(Settings settings) {
-        super(settings.maxDamage(10));
+        super(settings.maxDamage(50));
     }
     @Override public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (user.getItemCooldownManager().isCoolingDown(stack)) {
@@ -42,7 +37,7 @@ public class frozenstick extends Item {
             entity.setFrozenTicks(150);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
-            stack.damage(1, user, slot);
+            stack.damage(5, user, slot);
 
             user.getItemCooldownManager().set(stack, 60);
         }
@@ -51,11 +46,13 @@ public class frozenstick extends Item {
 
     @Override public ActionResult use(World world, PlayerEntity user, Hand hand) {
 
-        BlockHitResult fluid = raycast(world, user, RaycastContext.FluidHandling.WATER);
+        BlockHitResult fluid = raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
         BlockPos waterLoc = fluid.getBlockPos();
 
-        if (world.getBlockState(waterLoc).getBlock() == Blocks.WATER) {
-            world.setBlockState(waterLoc, Blocks.ICE.getDefaultState());
+        if (world.getBlockState(waterLoc).getBlock() == Blocks.WATER || world.getBlockState(waterLoc).getBlock() == Blocks.LAVA) {
+            if (world.getBlockState(waterLoc).getBlock() == Blocks.WATER) {world.setBlockState(waterLoc, Blocks.ICE.getDefaultState());}
+            else {world.setBlockState(waterLoc, Blocks.OBSIDIAN.getDefaultState());}
+
 
             ItemStack stack = user.getStackInHand(hand);
 

@@ -26,18 +26,18 @@ public class ModItems {
 
     public static final Item FIRESTICK = ModItems.register(
             "firestick",
-            firestick::new, // uses your custom item class
-            new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
+            firestick::new,
+            new Item.Settings().maxCount(1).maxDamage(50)
     );
     public static final Item FROZENSTICK = ModItems.register(
             "frozenstick",
-            frozenstick::new, // uses your custom item class
-            new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
+            frozenstick::new,
+            new Item.Settings().maxCount(1).maxDamage(50)
     );
     public static final Item TICKLESTICK = ModItems.register(
             "ticklestick",
-            ticklestick::new, // uses your custom item class
-            new Item.Settings().maxCount(1).maxDamage(10).maxCount(1)
+            ticklestick::new,
+            new Item.Settings().maxCount(1).maxDamage(50)
     );
 
     public static void initialize() {

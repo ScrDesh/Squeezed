@@ -14,7 +14,7 @@ import straight.squeezin.it.statuseffects.ModEffects;
 public class ticklestick extends Item {
 
     public ticklestick(Settings settings) {
-        super(settings.maxDamage(10));
+        super(settings.maxDamage(50));
     }
     @Override public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (user.getItemCooldownManager().isCoolingDown(stack)) {
@@ -31,7 +31,7 @@ public class ticklestick extends Item {
             entity.addStatusEffect(defDownEffectInstance);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
-            stack.damage(1, user, slot);
+            stack.damage(5, user, slot);
 
             user.getItemCooldownManager().set(stack, 60);
         }

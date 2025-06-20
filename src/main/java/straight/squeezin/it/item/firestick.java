@@ -23,7 +23,7 @@ import java.util.Optional;
 public class firestick extends Item {
 
     public firestick(Settings settings) {
-        super(settings.maxDamage(10));
+        super(settings.maxDamage(50));
     }
     @Override public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (user.getItemCooldownManager().isCoolingDown(stack)) {
@@ -39,7 +39,7 @@ public class firestick extends Item {
             entity.addStatusEffect(burnEffectInstance);
 
             EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
-            stack.damage(1, user, slot);
+            stack.damage(5, user, slot);
 
             user.getItemCooldownManager().set(stack, 60);
         }
@@ -65,7 +65,7 @@ public class firestick extends Item {
         if (context.getPlayer().getItemCooldownManager().isCoolingDown(context.getStack())) {return ActionResult.FAIL;}
 
         if (!world.isClient()) {
-            int newBurnTicks = burnTicks + 200;
+            int newBurnTicks = burnTicks + 40;
             nbtandshi.putInt("lit_time_remaining", newBurnTicks);
             world.getBlockEntity(loc).readComponentlessNbt(nbtandshi, registryLookup);
             world.getBlockEntity(loc).markDirty();
